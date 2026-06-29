@@ -15,14 +15,17 @@ export const blogPosts = Object.keys(markdownModules).map((path) => {
     slug,
     path: `/blog/${slug}`,
     component: mod.default,
-    frontmatter: mod.frontmatter || {
-      title: slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
-      date: new Date().toISOString().split('T')[0],
-      summary: '',
-      tags: []
+    frontmatter: {
+      title: mod.title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+      date: mod.date || new Date().toISOString().split('T')[0],
+      author: mod.author || 'Sooraj Parakkattil Ravi',
+      summary: mod.summary || '',
+      tags: mod.tags || []
     }
   };
 });
+
+
 
 const routes = [
   {

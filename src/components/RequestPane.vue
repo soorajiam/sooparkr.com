@@ -195,7 +195,8 @@ const triggerSend = () => {
   align-items: stretch;
   gap: 8px;
   background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
   padding: 4px;
 }
@@ -210,7 +211,7 @@ const triggerSend = () => {
   border: none;
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
   padding: 8px 12px;
   outline: none;
@@ -218,9 +219,9 @@ const triggerSend = () => {
   border-radius: var(--radius-sm);
 }
 
-.method-select.get { color: var(--accent-emerald); }
+.method-select.get { color: var(--accent-cyan); }
 .method-select.post { color: var(--accent-amber); }
-.method-select.put { color: var(--accent-cyan); }
+.method-select.put { color: var(--accent-purple); }
 .method-select.delete { color: var(--accent-rose); }
 
 .method-select option {
@@ -243,15 +244,16 @@ const triggerSend = () => {
   font-size: 0.85rem;
   padding: 8px;
   outline: none;
+  font-weight: 600;
 }
 
 .send-btn {
   background: var(--accent-cyan);
-  color: var(--bg-primary);
-  font-weight: 700;
+  color: var(--text-primary);
+  font-weight: 800;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
-  border: none;
+  border: 2px solid var(--text-primary);
   border-radius: var(--radius-sm);
   padding: 0 20px;
   cursor: pointer;
@@ -259,12 +261,18 @@ const triggerSend = () => {
   align-items: center;
   gap: 8px;
   transition: var(--transition-smooth);
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .send-btn:hover:not(:disabled) {
-  background: #22d3ee;
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+  background: var(--accent-purple);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px 0px var(--text-primary);
+}
+
+.send-btn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px var(--text-primary);
 }
 
 .send-btn:disabled {
@@ -277,8 +285,8 @@ const triggerSend = () => {
 .spinner {
   width: 14px;
   height: 14px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-top-color: var(--bg-primary);
+  border: 2px solid rgba(30, 30, 30, 0.2);
+  border-top-color: var(--text-primary);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -292,26 +300,27 @@ const triggerSend = () => {
   display: flex;
   flex-direction: column;
   background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
 .config-tabs {
   display: flex;
-  background: rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-tertiary);
+  border-bottom: 2px solid var(--text-primary);
 }
 
 .tab-btn {
   background: transparent;
   border: none;
   padding: 10px 16px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
+  border-right: 2px solid var(--text-primary);
   transition: var(--transition-smooth);
   display: flex;
   align-items: center;
@@ -319,14 +328,13 @@ const triggerSend = () => {
 }
 
 .tab-btn:hover:not(.disabled) {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .tab-btn.active {
-  color: var(--accent-cyan);
-  border-bottom-color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.02);
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  font-weight: 800;
 }
 
 .tab-btn.disabled {
@@ -335,21 +343,23 @@ const triggerSend = () => {
 }
 
 .tab-badge {
-  background: var(--bg-tertiary);
-  color: var(--text-secondary);
+  background: #FFFFFF;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
   font-size: 0.65rem;
   padding: 1px 5px;
   border-radius: 10px;
 }
 
 .tab-btn.active .tab-badge {
-  background: var(--accent-cyan-glow);
-  color: var(--accent-cyan);
+  background: var(--accent-cyan);
+  color: var(--text-primary);
 }
 
 .tab-content {
   flex: 1;
   overflow-y: auto;
+  background: #FFFFFF;
 }
 
 .config-table-container {
@@ -364,10 +374,10 @@ const triggerSend = () => {
 
 .config-table th {
   text-align: left;
-  color: var(--text-muted);
-  font-weight: 600;
+  color: var(--text-primary);
+  font-weight: 800;
   padding: 8px;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 2px solid var(--text-primary);
 }
 
 .config-table td {
@@ -388,7 +398,8 @@ const triggerSend = () => {
 
 .table-input:focus {
   background: var(--bg-primary);
-  border-color: var(--border-light);
+  border-bottom: 1px dashed var(--text-primary);
+  border-radius: 0;
 }
 
 .checkbox-input {
@@ -406,9 +417,9 @@ const triggerSend = () => {
   width: 100%;
   height: 100%;
   min-height: 120px;
-  background: transparent;
+  background: #FFFFFF;
   border: none;
-  color: var(--accent-cyan);
+  color: var(--text-primary);
   font-family: var(--font-mono);
   font-size: 0.8rem;
   padding: 12px;
@@ -424,7 +435,7 @@ const triggerSend = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(245, 245, 245, 0.9);
   color: var(--text-muted);
   font-size: 0.8rem;
   text-align: center;

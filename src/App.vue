@@ -62,8 +62,9 @@ import { RouterView } from 'vue-router';
   align-items: center;
   justify-content: space-between;
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-light);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--text-primary);
+  background: var(--bg-secondary);
+  box-shadow: 4px 4px 0px 0px var(--text-primary);
 }
 
 .logo-area {
@@ -78,11 +79,11 @@ import { RouterView } from 'vue-router';
   font-family: var(--font-mono);
   font-weight: 800;
   font-size: 0.95rem;
-  color: var(--accent-cyan);
-  background: var(--accent-cyan-glow);
+  color: var(--text-primary);
+  background: var(--accent-cyan);
   padding: 4px 8px;
-  border-radius: 4px;
-  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--text-primary);
 }
 
 .logo-text {
@@ -92,7 +93,7 @@ import { RouterView } from 'vue-router';
 }
 
 .logo-text .dot {
-  color: var(--accent-cyan);
+  color: var(--text-primary);
 }
 
 .navigation {
@@ -104,30 +105,32 @@ import { RouterView } from 'vue-router';
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
   padding: 8px 14px;
-  border-radius: 6px;
-  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
   transition: var(--transition-smooth);
 }
 
 .nav-link:hover {
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-tertiary);
+  border-color: var(--text-primary);
 }
 
 .nav-link.router-link-active {
-  color: var(--accent-cyan);
-  background: var(--accent-cyan-glow);
-  border-color: rgba(6, 182, 212, 0.15);
+  color: var(--text-primary);
+  background: var(--accent-cyan);
+  border-color: var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .nav-icon {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .app-body {

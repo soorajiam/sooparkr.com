@@ -91,8 +91,8 @@ const endpoints = [
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-right: 1px solid var(--border-light);
-  background: rgba(15, 23, 42, 0.4);
+  border-right: 2px solid var(--text-primary);
+  background: var(--bg-secondary);
 }
 
 .collection-header {
@@ -100,26 +100,27 @@ const endpoints = [
   align-items: center;
   gap: 8px;
   padding: 20px 16px;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 2px solid var(--text-primary);
+  background: var(--bg-secondary);
 }
 
 .header-icon {
-  color: var(--accent-cyan);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
 }
 
 .collection-header h2 {
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.05em;
   color: var(--text-primary);
 }
 
 .section-title {
   font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--text-muted);
+  font-weight: 800;
+  color: var(--text-primary);
   letter-spacing: 0.1em;
   padding: 16px 16px 8px;
 }
@@ -127,7 +128,7 @@ const endpoints = [
 .endpoint-list {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
   padding: 0 8px;
 }
 
@@ -137,34 +138,38 @@ const endpoints = [
   gap: 10px;
   width: 100%;
   padding: 10px 12px;
-  background: transparent;
-  border: 1px solid transparent;
+  background: var(--bg-secondary);
+  border: 2px solid transparent;
   border-radius: var(--radius-sm);
   text-align: left;
   cursor: pointer;
+  font-weight: 700;
   transition: var(--transition-smooth);
 }
 
 .endpoint-item:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-tertiary);
+  border-color: var(--text-primary);
 }
 
 .endpoint-item.active {
-  background: rgba(6, 182, 212, 0.08);
-  border-color: rgba(6, 182, 212, 0.15);
+  background: var(--accent-cyan);
+  border-color: var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .method-tag {
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 800;
   padding: 2px 6px;
-  border-radius: 4px;
+  border: 1px solid var(--text-primary);
+  border-radius: 2px;
 }
 
 .method-tag.get {
-  background: rgba(16, 185, 129, 0.15);
-  color: var(--accent-emerald);
+  background: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .method-tag.get.mini {
@@ -175,11 +180,10 @@ const endpoints = [
 .endpoint-path {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: var(--transition-smooth);
 }
 
 .endpoint-item.active .endpoint-path {
@@ -191,7 +195,7 @@ const endpoints = [
   flex: 1;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--border-light);
+  border-top: 2px solid var(--text-primary);
 }
 
 .history-header {
@@ -202,20 +206,21 @@ const endpoints = [
 }
 
 .clear-history-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
+  background: var(--bg-secondary);
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 2px 8px;
   border-radius: 4px;
   transition: var(--transition-smooth);
 }
 
 .clear-history-btn:hover {
-  color: var(--accent-rose);
-  background: rgba(244, 63, 94, 0.05);
+  background: var(--accent-rose);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  transform: translate(-1px, -1px);
 }
 
 .history-empty {
@@ -232,7 +237,7 @@ const endpoints = [
   padding: 0 8px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .history-item {
@@ -240,15 +245,16 @@ const endpoints = [
   flex-direction: column;
   padding: 8px 12px;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid transparent;
+  background: var(--bg-secondary);
+  border: 2px solid var(--text-primary);
   cursor: pointer;
   transition: var(--transition-smooth);
 }
 
 .history-item:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: var(--border-light);
+  background: var(--bg-tertiary);
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .history-meta {
@@ -260,7 +266,7 @@ const endpoints = [
 .history-path {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -275,7 +281,8 @@ const endpoints = [
 }
 
 .history-status {
-  font-weight: 600;
+  font-weight: 800;
+  font-family: var(--font-mono);
 }
 
 .status-ok {

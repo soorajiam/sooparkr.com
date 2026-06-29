@@ -251,7 +251,7 @@ const expandedJob = ref(0); // Default expand first job
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 2px solid var(--text-primary);
   padding-bottom: 12px;
 }
 
@@ -430,19 +430,21 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .profile-summary {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
   padding: 14px;
   font-size: 0.85rem;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 
 .contact-card {
@@ -450,8 +452,8 @@ const expandedJob = ref(0); // Default expand first job
   align-items: center;
   gap: 12px;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  border: 2px solid var(--text-primary);
   border-radius: var(--radius-sm);
   text-decoration: none;
   color: inherit;
@@ -459,16 +461,17 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .contact-card:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: var(--border-focus);
-  transform: translateY(-2px);
+  background: var(--bg-tertiary);
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .contact-icon {
   width: 32px;
   height: 32px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -506,8 +509,9 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .skill-category-block {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
   padding: 12px 16px;
 }
@@ -527,20 +531,21 @@ const expandedJob = ref(0); // Default expand first job
 
 .skill-badge {
   font-size: 0.75rem;
-  background: var(--bg-tertiary);
-  color: var(--text-secondary);
+  background: #FFFFFF;
+  color: var(--text-primary);
   padding: 4px 10px;
-  border-radius: 4px;
-  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--text-primary);
   cursor: default;
+  font-weight: 700;
   transition: var(--transition-smooth);
 }
 
 .skill-badge:hover, .skill-badge.active {
-  background: rgba(6, 182, 212, 0.1);
-  border-color: rgba(6, 182, 212, 0.3);
-  color: var(--text-primary);
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.1);
+  background: var(--accent-purple);
+  color: #FFFFFF;
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 /* Experience Visualizer Styles */
@@ -561,8 +566,8 @@ const expandedJob = ref(0); // Default expand first job
   top: 15px;
   bottom: -31px;
   left: -15px;
-  width: 2px;
-  background: var(--border-light);
+  width: 3px;
+  background: var(--text-primary);
 }
 
 .timeline-item:last-child .timeline-line {
@@ -573,23 +578,24 @@ const expandedJob = ref(0); // Default expand first job
   position: absolute;
   left: -20px;
   top: 6px;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: var(--bg-tertiary);
-  border: 2px solid var(--text-muted);
+  background: #FFFFFF;
+  border: 2px solid var(--text-primary);
   transition: var(--transition-smooth);
 }
 
 .timeline-item.active .timeline-dot {
   background: var(--accent-cyan);
-  border-color: var(--bg-primary);
-  box-shadow: 0 0 10px var(--accent-cyan);
+  border-color: var(--text-primary);
+  box-shadow: none;
 }
 
 .timeline-main {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
   padding: 14px;
   cursor: pointer;
@@ -597,8 +603,9 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .timeline-main:hover {
-  background: rgba(255, 255, 255, 0.02);
-  border-color: var(--border-focus);
+  background: var(--bg-tertiary);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px 0px var(--text-primary);
 }
 
 .timeline-header {
@@ -611,14 +618,14 @@ const expandedJob = ref(0); // Default expand first job
 
 .job-role {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--text-primary);
 }
 
 .job-company {
   font-size: 0.8rem;
-  color: var(--accent-cyan);
-  font-weight: 500;
+  color: var(--accent-purple);
+  font-weight: 700;
 }
 
 .job-meta {
@@ -628,17 +635,18 @@ const expandedJob = ref(0); // Default expand first job
 
 .job-period {
   display: block;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-weight: 800;
+  color: var(--text-primary);
 }
 
 .job-location {
   color: var(--text-muted);
+  font-weight: 600;
 }
 
 .job-details {
   margin-top: 14px;
-  border-top: 1px dashed var(--border-light);
+  border-top: 2px dashed var(--text-primary);
   padding-top: 12px;
 }
 
@@ -685,17 +693,18 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .project-card-ui {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
   padding: 16px;
   transition: var(--transition-smooth);
 }
 
 .project-card-ui:hover {
-  border-color: var(--border-focus);
-  background: rgba(255, 255, 255, 0.02);
-  transform: translateY(-2px);
+  background: var(--bg-tertiary);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px 0px var(--text-primary);
 }
 
 .project-header-ui {
@@ -708,26 +717,27 @@ const expandedJob = ref(0); // Default expand first job
 .project-tag {
   font-size: 0.6rem;
   text-transform: uppercase;
-  font-weight: 700;
-  padding: 1px 6px;
-  border-radius: 4px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid var(--text-primary);
   margin-right: 8px;
 }
 
 .project-tag.professional {
-  background: rgba(6, 182, 212, 0.15);
-  color: var(--accent-cyan);
+  background: var(--accent-cyan);
+  color: var(--text-primary);
 }
 
 .project-tag.personal {
-  background: rgba(245, 158, 11, 0.15);
-  color: var(--accent-amber);
+  background: var(--accent-amber);
+  color: var(--text-primary);
 }
 
 .project-header-ui h4 {
   display: inline-block;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .project-period {
@@ -764,8 +774,9 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .edu-card-ui {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
   padding: 14px;
 }
@@ -779,12 +790,13 @@ const expandedJob = ref(0); // Default expand first job
 
 .edu-title-group h4 {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .edu-inst {
   font-size: 0.75rem;
-  color: var(--accent-cyan);
+  color: var(--accent-purple);
+  font-weight: 700;
   display: block;
 }
 
@@ -795,8 +807,8 @@ const expandedJob = ref(0); // Default expand first job
 
 .edu-date {
   display: block;
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .edu-loc {
@@ -806,11 +818,12 @@ const expandedJob = ref(0); // Default expand first job
 .edu-grade-tag {
   display: inline-block;
   font-size: 0.7rem;
-  background: rgba(16, 185, 129, 0.12);
-  color: var(--accent-emerald);
+  background: var(--accent-cyan);
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
   padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -834,8 +847,9 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .cert-card-ui {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
   padding: 14px;
   display: flex;
@@ -846,17 +860,18 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .cert-card-ui:hover {
-  border-color: rgba(16, 185, 129, 0.3);
-  background: rgba(16, 185, 129, 0.02);
-  transform: translateY(-2px);
+  background: var(--bg-tertiary);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px 0px var(--text-primary);
 }
 
 .cert-shield-icon {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--accent-emerald);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -865,7 +880,7 @@ const expandedJob = ref(0); // Default expand first job
 
 .cert-info h4 {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.3;
 }
 
@@ -880,10 +895,10 @@ const expandedJob = ref(0); // Default expand first job
   bottom: 8px;
   right: 8px;
   font-size: 0.6rem;
-  color: var(--accent-emerald);
-  font-weight: 700;
+  color: var(--accent-cyan);
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 </style>

@@ -183,7 +183,7 @@ const handleClearHistory = () => {
 <style scoped>
 .portfolio-page {
   height: 100%;
-  background: radial-gradient(circle at top right, rgba(6, 182, 212, 0.03), transparent 600px);
+  background: var(--bg-primary);
   overflow: hidden;
 }
 
@@ -247,7 +247,8 @@ const handleClearHistory = () => {
   .mobile-output-tabs {
     display: flex;
     background: var(--bg-secondary);
-    border: 1px solid var(--border-light);
+    border: 2px solid var(--text-primary);
+    box-shadow: 2px 2px 0px 0px var(--text-primary);
     border-radius: var(--radius-sm);
     padding: 3px;
     gap: 4px;
@@ -258,19 +259,19 @@ const handleClearHistory = () => {
     flex: 1;
     background: transparent;
     border: none;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     padding: 8px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
     transition: var(--transition-smooth);
   }
 
   .output-tab-btn.active {
-    background: var(--bg-tertiary);
-    color: var(--accent-cyan);
-    box-shadow: 0 0 10px rgba(6, 182, 212, 0.05);
+    background: var(--accent-purple);
+    color: #FFFFFF;
+    border: 1px solid var(--text-primary);
   }
 
   .mobile-hidden {
@@ -312,9 +313,9 @@ const handleClearHistory = () => {
     bottom: 0;
     left: -280px;
     width: 280px;
-    background: var(--bg-primary);
-    box-shadow: 15px 0 30px rgba(0, 0, 0, 0.7);
-    border-right: 1px solid var(--border-light);
+    background: var(--bg-secondary);
+    box-shadow: 6px 0 0px var(--text-primary);
+    border-right: 2px solid var(--text-primary);
     z-index: 50;
   }
 
@@ -328,9 +329,7 @@ const handleClearHistory = () => {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(5, 8, 17, 0.7);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(30, 30, 30, 0.4);
     z-index: 40;
   }
 
@@ -339,7 +338,8 @@ const handleClearHistory = () => {
     align-items: center;
     justify-content: space-between;
     background: var(--bg-secondary);
-    border: 1px solid var(--border-light);
+    border: 2px solid var(--text-primary);
+    box-shadow: 2px 2px 0px 0px var(--text-primary);
     border-radius: var(--radius-sm);
     padding: 8px 12px;
     flex-shrink: 0;
@@ -349,19 +349,21 @@ const handleClearHistory = () => {
     display: flex;
     align-items: center;
     gap: 6px;
-    background: var(--accent-cyan-glow);
-    color: var(--accent-cyan);
-    border: 1px solid rgba(6, 182, 212, 0.2);
-    border-radius: 4px;
+    background: var(--accent-cyan);
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+    border-radius: var(--radius-sm);
     padding: 6px 12px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 800;
     cursor: pointer;
     transition: var(--transition-smooth);
   }
 
   .mobile-toggle-btn:hover {
-    background: rgba(6, 182, 212, 0.15);
+    background: var(--accent-purple);
+    color: #FFFFFF;
+    box-shadow: 1px 1px 0px 0px var(--text-primary);
   }
 
   .folder-icon {
@@ -371,15 +373,16 @@ const handleClearHistory = () => {
   .active-endpoint-pill {
     font-family: var(--font-mono);
     font-size: 0.7rem;
-    color: var(--accent-emerald);
-    background: rgba(16, 185, 129, 0.08);
-    border: 1px solid rgba(16, 185, 129, 0.15);
+    color: var(--text-primary);
+    background: #FFFFFF;
+    border: 2px solid var(--text-primary);
     padding: 3px 8px;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     max-width: 160px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-weight: 700;
   }
 }
 </style>

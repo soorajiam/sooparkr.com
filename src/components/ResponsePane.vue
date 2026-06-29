@@ -173,11 +173,11 @@ const copyToClipboard = () => {
 
 <style>
 /* Global styles for dynamic syntax highlighting (needs to be un-scoped to apply to raw html) */
-.json-key { color: #f43f5e; font-weight: 500; } /* red */
-.json-string { color: #10b981; } /* emerald */
-.json-number { color: #f59e0b; } /* amber */
-.json-boolean { color: #06b6d4; font-weight: bold; } /* cyan */
-.json-null { color: #64748b; font-style: italic; } /* gray */
+.json-key { color: #A259FF; font-weight: 800; } /* Vibrant Purple */
+.json-string { color: #0ACF83; } /* Figma Green */
+.json-number { color: #F24E1E; font-weight: 800; } /* Alert Orange */
+.json-boolean { color: #A259FF; font-weight: 800; } /* Vibrant Purple */
+.json-null { color: #666666; font-style: italic; } /* Dark Slate */
 </style>
 
 <style scoped>
@@ -206,15 +206,15 @@ const copyToClipboard = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 2px solid var(--text-primary);
   padding-bottom: 12px;
 }
 
 .response-info-bar h3 {
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.05em;
-  color: var(--text-muted);
+  color: var(--text-primary);
 }
 
 .meta-tags {
@@ -226,28 +226,31 @@ const copyToClipboard = () => {
 .status-badge {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   padding: 2px 8px;
   border-radius: var(--radius-sm);
 }
 
 .status-badge.success {
-  background: rgba(16, 185, 129, 0.15);
-  color: var(--accent-emerald);
-  box-shadow: 0 0 10px rgba(16, 185, 129, 0.1);
+  background: var(--accent-cyan);
+  color: var(--text-primary);
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .status-badge.error {
-  background: rgba(244, 63, 94, 0.15);
-  color: var(--accent-rose);
-  box-shadow: 0 0 10px rgba(244, 63, 94, 0.1);
+  background: var(--accent-rose);
+  color: var(--text-primary);
+  border: 2px solid var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .meta-tag {
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: var(--text-secondary);
-  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  background: #FFFFFF;
+  border: 1px solid var(--text-primary);
   padding: 2px 8px;
   border-radius: var(--radius-sm);
 }
@@ -337,8 +340,8 @@ const copyToClipboard = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-light);
-  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid var(--text-primary);
+  background: var(--bg-tertiary);
 }
 
 .tabs {
@@ -349,55 +352,60 @@ const copyToClipboard = () => {
   background: transparent;
   border: none;
   padding: 8px 16px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
+  border-right: 2px solid var(--text-primary);
   transition: var(--transition-smooth);
 }
 
 .tab-btn:hover {
-  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .tab-btn.active {
-  color: var(--accent-cyan);
-  border-bottom-color: var(--accent-cyan);
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  font-weight: 800;
 }
 
 .tab-badge {
-  background: var(--bg-tertiary);
-  color: var(--text-muted);
+  background: #FFFFFF;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
   font-size: 0.65rem;
   padding: 1px 4px;
   border-radius: 8px;
+  margin-left: 4px;
 }
 
 .copy-btn {
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-light);
-  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 700;
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
+  margin-right: 8px;
   transition: var(--transition-smooth);
 }
 
 .copy-btn:hover {
-  color: var(--text-primary);
-  background: var(--text-muted);
+  background: var(--bg-tertiary);
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .response-tab-content {
   flex: 1;
   overflow-y: auto;
   padding: 12px;
-  background: #050811;
+  background: #FFFFFF;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  border: 1px solid var(--border-light);
+  border: 2px solid var(--text-primary);
   border-top: none;
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -411,6 +419,7 @@ const copyToClipboard = () => {
   white-space: pre-wrap;
   word-wrap: break-word;
   line-height: 1.6;
+  color: var(--text-primary);
 }
 
 .headers-list {
@@ -423,17 +432,18 @@ const copyToClipboard = () => {
   display: grid;
   grid-template-columns: 200px 1fr;
   padding: 6px 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--text-primary);
   font-size: 0.75rem;
 }
 
 .header-name {
-  color: var(--accent-cyan);
-  font-weight: 600;
+  color: var(--accent-purple);
+  font-weight: 700;
 }
 
 .header-val {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   word-break: break-all;
+  font-weight: 600;
 }
 </style>
