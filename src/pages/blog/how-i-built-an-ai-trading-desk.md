@@ -1,14 +1,14 @@
 ---
-title: "I Gave an AI Agent a Brokerage API. Then I Built a Compliance Department Around It."
+title: "I Gave an AI Agent my Brokerage account. Then I Built a Compliance Department Around It."
 date: "2026-10-06"
 author: "Sooraj Parakkattil Ravi"
 summary: "Nine days, 85 MCP tools, a hash-chained ledger, ~1,000 tests, a stock that went to zero before the opening bell, and a fleet of polite robots that weren't allowed to fix their own bugs. A build log, with receipts."
 tags: ["ai-agents", "mcp", "trading", "claude-code", "build-log"]
 ---
 
-# I Gave an AI Agent a Brokerage API. Then I Built a Compliance Department Around It.
+# I Gave an AI Agent my Brokerage account. Then I Built a Compliance Department Around It.
 
-*Nine days, 85 MCP tools, a hash-chained ledger, ~1,000 tests, a stock that went to zero before the opening bell, and a fleet of polite robots that weren't allowed to fix their own bugs. A build log, with receipts.*
+*Nine days, 85 MCP tools, a hash-chained ledger, ~1,000 tests, a stock that went to zero before the opening bell, and a fleet of polite robots that were allowed to fix their own bugs. A build log, with receipts.*
 
 > **Disclaimer.** Nothing here is investment advice. Stocks are named because the system looked at them, not because anyone should. All times are IST (UTC+5:30).
 
