@@ -1,5 +1,5 @@
 <script setup>
-import { shallowRef } from 'vue';
+import { shallowRef, ref, onMounted } from 'vue';
 
 const props = defineProps({
   postComponent: {
@@ -14,6 +14,26 @@ const props = defineProps({
 
 // Use shallowRef to avoid reactivity overhead on Vue components
 const componentToRender = shallowRef(props.postComponent);
+
+const bodyRef = ref(null);
+
+// Render ```mermaid fenced blocks as diagrams; mermaid is only loaded when a post uses it
+onMounted(async () => {
+  const blocks = bodyRef.value?.querySelectorAll('pre > code.language-mermaid') ?? [];
+  if (!blocks.length) return;
+
+  const nodes = [...blocks].map((code) => {
+    const div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = code.textContent;
+    code.parentElement.replaceWith(div);
+    return div;
+  });
+
+  const { default: mermaid } = await import('mermaid');
+  mermaid.initialize({ startOnLoad: false, theme: 'neutral', fontFamily: 'Georgia, serif' });
+  await mermaid.run({ nodes });
+});
 </script>
 
 <template>
@@ -39,7 +59,7 @@ const componentToRender = shallowRef(props.postComponent);
             {{ frontmatter.date }}
           </div>
 
-          <div class="essay-body-content">
+          <div class="essay-body-content" ref="bodyRef">
             <component :is="componentToRender" class="pg-markdown-body" />
           </div>
         </article>
@@ -232,6 +252,13 @@ const componentToRender = shallowRef(props.postComponent);
   border-radius: 0;
   color: #333333;
   font-size: 0.9rem;
+}
+
+:deep(.pg-markdown-body .mermaid) {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  overflow-x: auto;
 }
 
 :deep(.pg-markdown-body blockquote) {
