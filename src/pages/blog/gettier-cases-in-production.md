@@ -2,7 +2,7 @@
 title: "Deep Research on a Token Budget"
 date: "2026-10-08"
 author: "Sooraj Parakkattil Ravi"
-summary: "A build log for Indian-equities research: three databases, one ~2M-token mistake, a knowledge graph that knew nothing about anything, and an adversarial verifier that went twelve for twelve."
+summary: "A build log for Indian-equities research: three databases, one ~2M-token mistake, a knowledge graph that knew nothing about anything, and an adversarial verifier that went twelve for twelve. Every incident here happened, every number comes from a task file, brief or run report, and the skeptic was right more often than I was."
 tags: ["ai-agents", "deep-research", "knowledge-graphs", "claude-code", "build-log"]
 ---
 
