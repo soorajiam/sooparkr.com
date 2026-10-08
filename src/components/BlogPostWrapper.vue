@@ -210,13 +210,44 @@ onMounted(async () => {
   text-align: justify;
 }
 
-:deep(.pg-markdown-body ul, .pg-markdown-body ol) {
+:deep(.pg-markdown-body ul),
+:deep(.pg-markdown-body ol) {
   margin-bottom: 1.4rem;
   padding-left: 1.5rem;
+  color: #111111; /* override dark-theme .markdown-body list color from style.css */
 }
 
 :deep(.pg-markdown-body li) {
   margin-bottom: 0.4rem;
+}
+
+:deep(.pg-markdown-body img) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+:deep(.pg-markdown-body table) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-bottom: 1.4rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+:deep(.pg-markdown-body th),
+:deep(.pg-markdown-body td) {
+  border: 1px solid #e3e3e0;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+:deep(.pg-markdown-body th) {
+  background: #f1f1ef;
 }
 
 :deep(.pg-markdown-body a) {
