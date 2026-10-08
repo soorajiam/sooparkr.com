@@ -91,7 +91,7 @@ const endpoints = [
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-right: 2px solid var(--text-primary);
+  border-right: 2px solid var(--line);
   background: var(--bg-secondary);
 }
 
@@ -100,7 +100,7 @@ const endpoints = [
   align-items: center;
   gap: 8px;
   padding: 20px 16px;
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--line);
   background: var(--bg-secondary);
 }
 
@@ -149,13 +149,13 @@ const endpoints = [
 
 .endpoint-item:hover {
   background: var(--bg-tertiary);
-  border-color: var(--text-primary);
+  border-color: var(--line);
 }
 
 .endpoint-item.active {
   background: var(--accent-cyan);
-  border-color: var(--text-primary);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  border-color: var(--line);
+  box-shadow: 2px 2px 0px 0px var(--line);
 }
 
 .method-tag {
@@ -163,12 +163,12 @@ const endpoints = [
   font-size: 0.7rem;
   font-weight: 800;
   padding: 2px 6px;
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--line);
   border-radius: 2px;
 }
 
 .method-tag.get {
-  background: #FFFFFF;
+  background: var(--bg-card);
   color: var(--text-primary);
 }
 
@@ -195,7 +195,7 @@ const endpoints = [
   flex: 1;
   display: flex;
   flex-direction: column;
-  border-top: 2px solid var(--text-primary);
+  border-top: 2px solid var(--line);
 }
 
 .history-header {
@@ -207,7 +207,7 @@ const endpoints = [
 
 .clear-history-btn {
   background: var(--bg-secondary);
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
   color: var(--text-primary);
   font-size: 0.7rem;
   font-weight: 700;
@@ -219,8 +219,9 @@ const endpoints = [
 
 .clear-history-btn:hover {
   background: var(--accent-rose);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--line);
   transform: translate(-1px, -1px);
+  color: var(--ink);
 }
 
 .history-empty {
@@ -246,7 +247,7 @@ const endpoints = [
   padding: 8px 12px;
   border-radius: var(--radius-sm);
   background: var(--bg-secondary);
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
   cursor: pointer;
   transition: var(--transition-smooth);
 }
@@ -254,7 +255,7 @@ const endpoints = [
 .history-item:hover {
   background: var(--bg-tertiary);
   transform: translate(-2px, -2px);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--line);
 }
 
 .history-meta {

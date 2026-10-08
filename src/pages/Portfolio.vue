@@ -247,8 +247,8 @@ const handleClearHistory = () => {
   .mobile-output-tabs {
     display: flex;
     background: var(--bg-secondary);
-    border: 2px solid var(--text-primary);
-    box-shadow: 2px 2px 0px 0px var(--text-primary);
+    border: 2px solid var(--line);
+    box-shadow: 2px 2px 0px 0px var(--line);
     border-radius: var(--radius-sm);
     padding: 3px;
     gap: 4px;
@@ -271,7 +271,7 @@ const handleClearHistory = () => {
   .output-tab-btn.active {
     background: var(--accent-purple);
     color: #FFFFFF;
-    border: 1px solid var(--text-primary);
+    border: 1px solid var(--line);
   }
 
   .mobile-hidden {
@@ -314,8 +314,8 @@ const handleClearHistory = () => {
     left: -280px;
     width: 280px;
     background: var(--bg-secondary);
-    box-shadow: 6px 0 0px var(--text-primary);
-    border-right: 2px solid var(--text-primary);
+    box-shadow: 6px 0 0px var(--line);
+    border-right: 2px solid var(--line);
     z-index: 50;
   }
 
@@ -329,7 +329,7 @@ const handleClearHistory = () => {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(30, 30, 30, 0.4);
+    background: var(--overlay);
     z-index: 40;
   }
 
@@ -338,8 +338,8 @@ const handleClearHistory = () => {
     align-items: center;
     justify-content: space-between;
     background: var(--bg-secondary);
-    border: 2px solid var(--text-primary);
-    box-shadow: 2px 2px 0px 0px var(--text-primary);
+    border: 2px solid var(--line);
+    box-shadow: 2px 2px 0px 0px var(--line);
     border-radius: var(--radius-sm);
     padding: 8px 12px;
     flex-shrink: 0;
@@ -350,8 +350,8 @@ const handleClearHistory = () => {
     align-items: center;
     gap: 6px;
     background: var(--accent-cyan);
-    color: var(--text-primary);
-    border: 2px solid var(--text-primary);
+    color: var(--ink);
+    border: 2px solid var(--line);
     border-radius: var(--radius-sm);
     padding: 6px 12px;
     font-size: 0.75rem;
@@ -363,7 +363,7 @@ const handleClearHistory = () => {
   .mobile-toggle-btn:hover {
     background: var(--accent-purple);
     color: #FFFFFF;
-    box-shadow: 1px 1px 0px 0px var(--text-primary);
+    box-shadow: 1px 1px 0px 0px var(--line);
   }
 
   .folder-icon {
@@ -374,8 +374,8 @@ const handleClearHistory = () => {
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: var(--text-primary);
-    background: #FFFFFF;
-    border: 2px solid var(--text-primary);
+    background: var(--bg-card);
+    border: 2px solid var(--line);
     padding: 3px 8px;
     border-radius: var(--radius-sm);
     max-width: 160px;

@@ -8,6 +8,17 @@
     <meta name="description" content="Interactive Postman/Bruno-inspired API Client Portfolio and Systems Engineering Blog of Sooraj Parakkattil Ravi, AWS Certified Solutions Architect and Product Lead Engineer." />
     <meta name="keywords" content="Sooraj Parakkattil Ravi, Senior Backend Engineer, System Architecture, Django, Python, AWS Architect, Vue 3, API design, microservices" />
     <meta name="author" content="Sooraj Parakkattil Ravi" />
+    <script>
+      // Apply the saved or OS theme before first paint to avoid a light flash
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
   </head>
   <body>
     <div id="app"></div>

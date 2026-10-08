@@ -195,8 +195,8 @@ const triggerSend = () => {
   align-items: stretch;
   gap: 8px;
   background: var(--bg-secondary);
-  border: 2px solid var(--text-primary);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  border: 2px solid var(--line);
+  box-shadow: 2px 2px 0px 0px var(--line);
   border-radius: var(--radius-sm);
   padding: 4px;
 }
@@ -249,11 +249,11 @@ const triggerSend = () => {
 
 .send-btn {
   background: var(--accent-cyan);
-  color: var(--text-primary);
+  color: var(--ink);
   font-weight: 800;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 0 20px;
   cursor: pointer;
@@ -261,18 +261,18 @@ const triggerSend = () => {
   align-items: center;
   gap: 8px;
   transition: var(--transition-smooth);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--line);
 }
 
 .send-btn:hover:not(:disabled) {
   background: var(--accent-purple);
   transform: translate(-1px, -1px);
-  box-shadow: 3px 3px 0px 0px var(--text-primary);
+  box-shadow: 3px 3px 0px 0px var(--line);
 }
 
 .send-btn:active:not(:disabled) {
   transform: translate(1px, 1px);
-  box-shadow: 1px 1px 0px 0px var(--text-primary);
+  box-shadow: 1px 1px 0px 0px var(--line);
 }
 
 .send-btn:disabled {
@@ -285,7 +285,7 @@ const triggerSend = () => {
 .spinner {
   width: 14px;
   height: 14px;
-  border: 2px solid rgba(30, 30, 30, 0.2);
+  border: 2px solid var(--text-muted);
   border-top-color: var(--text-primary);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
@@ -300,8 +300,8 @@ const triggerSend = () => {
   display: flex;
   flex-direction: column;
   background: var(--bg-secondary);
-  border: 2px solid var(--text-primary);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  border: 2px solid var(--line);
+  box-shadow: 2px 2px 0px 0px var(--line);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
@@ -309,7 +309,7 @@ const triggerSend = () => {
 .config-tabs {
   display: flex;
   background: var(--bg-tertiary);
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--line);
 }
 
 .tab-btn {
@@ -320,7 +320,7 @@ const triggerSend = () => {
   font-size: 0.75rem;
   font-weight: 700;
   cursor: pointer;
-  border-right: 2px solid var(--text-primary);
+  border-right: 2px solid var(--line);
   transition: var(--transition-smooth);
   display: flex;
   align-items: center;
@@ -328,7 +328,7 @@ const triggerSend = () => {
 }
 
 .tab-btn:hover:not(.disabled) {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--hover-tint);
 }
 
 .tab-btn.active {
@@ -343,9 +343,9 @@ const triggerSend = () => {
 }
 
 .tab-badge {
-  background: #FFFFFF;
+  background: var(--bg-card);
   color: var(--text-primary);
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--line);
   font-size: 0.65rem;
   padding: 1px 5px;
   border-radius: 10px;
@@ -353,13 +353,13 @@ const triggerSend = () => {
 
 .tab-btn.active .tab-badge {
   background: var(--accent-cyan);
-  color: var(--text-primary);
+  color: var(--ink);
 }
 
 .tab-content {
   flex: 1;
   overflow-y: auto;
-  background: #FFFFFF;
+  background: var(--bg-card);
 }
 
 .config-table-container {
@@ -377,7 +377,7 @@ const triggerSend = () => {
   color: var(--text-primary);
   font-weight: 800;
   padding: 8px;
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--line);
 }
 
 .config-table td {
@@ -398,7 +398,7 @@ const triggerSend = () => {
 
 .table-input:focus {
   background: var(--bg-primary);
-  border-bottom: 1px dashed var(--text-primary);
+  border-bottom: 1px dashed var(--line);
   border-radius: 0;
 }
 
@@ -417,7 +417,7 @@ const triggerSend = () => {
   width: 100%;
   height: 100%;
   min-height: 120px;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: none;
   color: var(--text-primary);
   font-family: var(--font-mono);
@@ -435,7 +435,7 @@ const triggerSend = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(245, 245, 245, 0.9);
+  background: var(--loading-veil);
   color: var(--text-muted);
   font-size: 0.8rem;
   text-align: center;
