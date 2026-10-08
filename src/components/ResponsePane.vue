@@ -233,14 +233,14 @@ const copyToClipboard = () => {
 
 .status-badge.success {
   background: var(--accent-cyan);
-  color: var(--text-primary);
+  color: var(--ink);
   border: 2px solid var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
 
 .status-badge.error {
   background: var(--accent-rose);
-  color: var(--text-primary);
+  color: var(--ink);
   border: 2px solid var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
 }
@@ -249,7 +249,7 @@ const copyToClipboard = () => {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--text-primary);
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--text-primary);
   padding: 2px 8px;
   border-radius: var(--radius-sm);
@@ -361,7 +361,7 @@ const copyToClipboard = () => {
 }
 
 .tab-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--hover-tint);
 }
 
 .tab-btn.active {
@@ -371,7 +371,7 @@ const copyToClipboard = () => {
 }
 
 .tab-badge {
-  background: #FFFFFF;
+  background: var(--bg-card);
   color: var(--text-primary);
   border: 1px solid var(--text-primary);
   font-size: 0.65rem;
@@ -403,7 +403,7 @@ const copyToClipboard = () => {
   flex: 1;
   overflow-y: auto;
   padding: 12px;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   border: 2px solid var(--text-primary);
   border-top: none;

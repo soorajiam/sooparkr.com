@@ -168,7 +168,7 @@ const endpoints = [
 }
 
 .method-tag.get {
-  background: #FFFFFF;
+  background: var(--bg-card);
   color: var(--text-primary);
 }
 
@@ -221,6 +221,7 @@ const endpoints = [
   background: var(--accent-rose);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
   transform: translate(-1px, -1px);
+  color: var(--ink);
 }
 
 .history-empty {

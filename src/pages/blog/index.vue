@@ -50,8 +50,8 @@ const formatDate = (dateStr) => {
 
 <style scoped>
 .pg-index-page {
-  background-color: #fafaf9;
-  color: #111111;
+  background-color: var(--essay-bg);
+  color: var(--essay-text);
   min-height: 100vh;
   font-family: Georgia, serif;
   padding: 40px 20px;
@@ -64,7 +64,7 @@ const formatDate = (dateStr) => {
 }
 
 .pg-header {
-  border-bottom: 1px solid #e3e3e0;
+  border-bottom: 1px solid var(--essay-border);
   padding-bottom: 16px;
   margin-bottom: 40px;
   display: flex;
@@ -83,7 +83,7 @@ const formatDate = (dateStr) => {
 }
 
 .pg-nav-link {
-  color: #2b6cb0;
+  color: var(--essay-link);
   text-decoration: none;
 }
 
@@ -92,13 +92,13 @@ const formatDate = (dateStr) => {
 }
 
 .pg-nav-link.active {
-  color: #111111;
+  color: var(--essay-text);
   font-weight: bold;
   pointer-events: none;
 }
 
 .nav-sep {
-  color: #cbd5e0;
+  color: var(--essay-sep);
   margin: 0 10px;
 }
 
@@ -106,7 +106,7 @@ const formatDate = (dateStr) => {
   font-size: 1.8rem;
   font-weight: normal;
   margin-bottom: 24px;
-  color: #111111;
+  color: var(--essay-text);
 }
 
 .essay-list {
@@ -125,13 +125,13 @@ const formatDate = (dateStr) => {
 .essay-date {
   font-family: monospace;
   font-size: 0.85rem;
-  color: #718096;
+  color: var(--essay-muted);
   width: 90px;
   flex-shrink: 0;
 }
 
 .essay-link {
-  color: #2b6cb0;
+  color: var(--essay-link);
   text-decoration: none;
 }
 
@@ -140,10 +140,10 @@ const formatDate = (dateStr) => {
 }
 
 .pg-footer {
-  border-top: 1px solid #e3e3e0;
+  border-top: 1px solid var(--essay-border);
   padding-top: 20px;
   font-size: 0.8rem;
-  color: #718096;
+  color: var(--essay-muted);
   text-align: center;
 }
 </style>

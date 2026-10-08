@@ -1,5 +1,6 @@
 <script setup>
 import { RouterView } from 'vue-router';
+import { theme, toggleTheme } from './utils/theme';
 </script>
 
 <template>
@@ -15,13 +16,24 @@ import { RouterView } from 'vue-router';
         <nav class="navigation">
           <router-link to="/" class="nav-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            API Workspace
+            <span class="nav-label">API Workspace</span>
           </router-link>
           
           <router-link to="/blog" class="nav-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            Journals
+            <span class="nav-label">Journals</span>
           </router-link>
+
+          <button
+            type="button"
+            class="nav-link theme-toggle"
+            :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+            :title="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+            @click="toggleTheme"
+          >
+            <svg v-if="theme === 'dark'" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
         </nav>
       </div>
     </header>
@@ -79,7 +91,7 @@ import { RouterView } from 'vue-router';
   font-family: var(--font-mono);
   font-weight: 800;
   font-size: 0.95rem;
-  color: var(--text-primary);
+  color: var(--ink);
   background: var(--accent-cyan);
   padding: 4px 8px;
   border-radius: var(--radius-sm);
@@ -123,7 +135,7 @@ import { RouterView } from 'vue-router';
 }
 
 .nav-link.router-link-active {
-  color: var(--text-primary);
+  color: var(--ink);
   background: var(--accent-cyan);
   border-color: var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
@@ -131,6 +143,13 @@ import { RouterView } from 'vue-router';
 
 .nav-icon {
   opacity: 1;
+}
+
+.theme-toggle {
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 8px 10px;
 }
 
 .app-body {
@@ -169,6 +188,21 @@ import { RouterView } from 'vue-router';
 @media (max-width: 640px) {
   .logo-text {
     display: none; /* Only show icon logo on small mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0 12px;
+  }
+  .logo-icon {
+    white-space: nowrap;
+  }
+  .nav-label {
+    display: none; /* icon-only nav so the theme toggle fits */
+  }
+  .nav-link {
+    padding: 8px 10px;
   }
 }
 </style>

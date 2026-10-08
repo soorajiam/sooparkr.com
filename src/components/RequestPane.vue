@@ -249,7 +249,7 @@ const triggerSend = () => {
 
 .send-btn {
   background: var(--accent-cyan);
-  color: var(--text-primary);
+  color: var(--ink);
   font-weight: 800;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
@@ -285,7 +285,7 @@ const triggerSend = () => {
 .spinner {
   width: 14px;
   height: 14px;
-  border: 2px solid rgba(30, 30, 30, 0.2);
+  border: 2px solid var(--text-muted);
   border-top-color: var(--text-primary);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
@@ -328,7 +328,7 @@ const triggerSend = () => {
 }
 
 .tab-btn:hover:not(.disabled) {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--hover-tint);
 }
 
 .tab-btn.active {
@@ -343,7 +343,7 @@ const triggerSend = () => {
 }
 
 .tab-badge {
-  background: #FFFFFF;
+  background: var(--bg-card);
   color: var(--text-primary);
   border: 1px solid var(--text-primary);
   font-size: 0.65rem;
@@ -353,13 +353,13 @@ const triggerSend = () => {
 
 .tab-btn.active .tab-badge {
   background: var(--accent-cyan);
-  color: var(--text-primary);
+  color: var(--ink);
 }
 
 .tab-content {
   flex: 1;
   overflow-y: auto;
-  background: #FFFFFF;
+  background: var(--bg-card);
 }
 
 .config-table-container {
@@ -417,7 +417,7 @@ const triggerSend = () => {
   width: 100%;
   height: 100%;
   min-height: 120px;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: none;
   color: var(--text-primary);
   font-family: var(--font-mono);
@@ -435,7 +435,7 @@ const triggerSend = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(245, 245, 245, 0.9);
+  background: var(--loading-veil);
   color: var(--text-muted);
   font-size: 0.8rem;
   text-align: center;

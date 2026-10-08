@@ -271,6 +271,7 @@ const expandedJob = ref(0); // Default expand first job
 .pulse-dot.loading {
   background: var(--accent-cyan);
   animation: pulse-ring 1.25s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+  color: var(--ink);
 }
 
 @keyframes pulse-ring {
@@ -328,6 +329,7 @@ const expandedJob = ref(0); // Default expand first job
   border-radius: 50%;
   background: var(--accent-cyan);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  color: var(--ink);
 }
 
 .mesh-loader div:nth-child(1) {
@@ -430,7 +432,7 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .profile-summary {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
@@ -452,7 +454,7 @@ const expandedJob = ref(0); // Default expand first job
   align-items: center;
   gap: 12px;
   padding: 12px;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--text-primary);
   border-radius: var(--radius-sm);
   text-decoration: none;
@@ -509,7 +511,7 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .skill-category-block {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
@@ -531,7 +533,7 @@ const expandedJob = ref(0); // Default expand first job
 
 .skill-badge {
   font-size: 0.75rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   color: var(--text-primary);
   padding: 4px 10px;
   border-radius: var(--radius-sm);
@@ -581,7 +583,7 @@ const expandedJob = ref(0); // Default expand first job
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--text-primary);
   transition: var(--transition-smooth);
 }
@@ -593,7 +595,7 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .timeline-main {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
@@ -693,7 +695,7 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .project-card-ui {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
@@ -726,12 +728,12 @@ const expandedJob = ref(0); // Default expand first job
 
 .project-tag.professional {
   background: var(--accent-cyan);
-  color: var(--text-primary);
+  color: var(--ink);
 }
 
 .project-tag.personal {
   background: var(--accent-amber);
-  color: var(--text-primary);
+  color: var(--ink);
 }
 
 .project-header-ui h4 {
@@ -774,7 +776,7 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .edu-card-ui {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);
@@ -819,7 +821,7 @@ const expandedJob = ref(0); // Default expand first job
   display: inline-block;
   font-size: 0.7rem;
   background: var(--accent-cyan);
-  color: var(--text-primary);
+  color: var(--ink);
   border: 1px solid var(--text-primary);
   padding: 2px 8px;
   border-radius: var(--radius-sm);
@@ -847,7 +849,7 @@ const expandedJob = ref(0); // Default expand first job
 }
 
 .cert-card-ui {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--text-primary);
   box-shadow: 2px 2px 0px 0px var(--text-primary);
   border-radius: var(--radius-sm);

@@ -329,7 +329,7 @@ const handleClearHistory = () => {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(30, 30, 30, 0.4);
+    background: var(--overlay);
     z-index: 40;
   }
 
@@ -350,7 +350,7 @@ const handleClearHistory = () => {
     align-items: center;
     gap: 6px;
     background: var(--accent-cyan);
-    color: var(--text-primary);
+    color: var(--ink);
     border: 2px solid var(--text-primary);
     border-radius: var(--radius-sm);
     padding: 6px 12px;
@@ -374,7 +374,7 @@ const handleClearHistory = () => {
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: var(--text-primary);
-    background: #FFFFFF;
+    background: var(--bg-card);
     border: 2px solid var(--text-primary);
     padding: 3px 8px;
     border-radius: var(--radius-sm);
