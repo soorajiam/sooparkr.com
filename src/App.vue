@@ -74,9 +74,9 @@ import { theme, toggleTheme } from './utils/theme';
   align-items: center;
   justify-content: space-between;
   border-radius: var(--radius-md);
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
   background: var(--bg-secondary);
-  box-shadow: 4px 4px 0px 0px var(--text-primary);
+  box-shadow: 4px 4px 0px 0px var(--line);
 }
 
 .logo-area {
@@ -95,7 +95,7 @@ import { theme, toggleTheme } from './utils/theme';
   background: var(--accent-cyan);
   padding: 4px 8px;
   border-radius: var(--radius-sm);
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
 }
 
 .logo-text {
@@ -131,14 +131,14 @@ import { theme, toggleTheme } from './utils/theme';
 .nav-link:hover {
   color: var(--text-primary);
   background: var(--bg-tertiary);
-  border-color: var(--text-primary);
+  border-color: var(--line);
 }
 
 .nav-link.router-link-active {
   color: var(--ink);
   background: var(--accent-cyan);
-  border-color: var(--text-primary);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  border-color: var(--line);
+  box-shadow: 2px 2px 0px 0px var(--line);
 }
 
 .nav-icon {

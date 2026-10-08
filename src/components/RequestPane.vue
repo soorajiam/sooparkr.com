@@ -195,8 +195,8 @@ const triggerSend = () => {
   align-items: stretch;
   gap: 8px;
   background: var(--bg-secondary);
-  border: 2px solid var(--text-primary);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  border: 2px solid var(--line);
+  box-shadow: 2px 2px 0px 0px var(--line);
   border-radius: var(--radius-sm);
   padding: 4px;
 }
@@ -253,7 +253,7 @@ const triggerSend = () => {
   font-weight: 800;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 0 20px;
   cursor: pointer;
@@ -261,18 +261,18 @@ const triggerSend = () => {
   align-items: center;
   gap: 8px;
   transition: var(--transition-smooth);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--line);
 }
 
 .send-btn:hover:not(:disabled) {
   background: var(--accent-purple);
   transform: translate(-1px, -1px);
-  box-shadow: 3px 3px 0px 0px var(--text-primary);
+  box-shadow: 3px 3px 0px 0px var(--line);
 }
 
 .send-btn:active:not(:disabled) {
   transform: translate(1px, 1px);
-  box-shadow: 1px 1px 0px 0px var(--text-primary);
+  box-shadow: 1px 1px 0px 0px var(--line);
 }
 
 .send-btn:disabled {
@@ -300,8 +300,8 @@ const triggerSend = () => {
   display: flex;
   flex-direction: column;
   background: var(--bg-secondary);
-  border: 2px solid var(--text-primary);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  border: 2px solid var(--line);
+  box-shadow: 2px 2px 0px 0px var(--line);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
@@ -309,7 +309,7 @@ const triggerSend = () => {
 .config-tabs {
   display: flex;
   background: var(--bg-tertiary);
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--line);
 }
 
 .tab-btn {
@@ -320,7 +320,7 @@ const triggerSend = () => {
   font-size: 0.75rem;
   font-weight: 700;
   cursor: pointer;
-  border-right: 2px solid var(--text-primary);
+  border-right: 2px solid var(--line);
   transition: var(--transition-smooth);
   display: flex;
   align-items: center;
@@ -345,7 +345,7 @@ const triggerSend = () => {
 .tab-badge {
   background: var(--bg-card);
   color: var(--text-primary);
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--line);
   font-size: 0.65rem;
   padding: 1px 5px;
   border-radius: 10px;
@@ -377,7 +377,7 @@ const triggerSend = () => {
   color: var(--text-primary);
   font-weight: 800;
   padding: 8px;
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--line);
 }
 
 .config-table td {
@@ -398,7 +398,7 @@ const triggerSend = () => {
 
 .table-input:focus {
   background: var(--bg-primary);
-  border-bottom: 1px dashed var(--text-primary);
+  border-bottom: 1px dashed var(--line);
   border-radius: 0;
 }
 

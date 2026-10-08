@@ -31,6 +31,7 @@
   --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
   --bg-card: #FFFFFF;
+  --line: #1E1E1E; /* borders and offset shadows */
   --ink: #1E1E1E; /* text on accent fills; stays dark in both themes */
   --overlay: rgba(30, 30, 30, 0.4);
   --hover-tint: rgba(0, 0, 0, 0.05);
@@ -58,13 +59,14 @@
   --bg-secondary: #1C1C1C;
   --bg-tertiary: #2A2A2A;
   --bg-glass: #1C1C1C;
-  --border-light: #E5E5E5;
+  --border-light: #3D3D3D;
 
   --text-primary: #EDEDED;
   --text-secondary: #D4D4D4;
   --text-muted: #A3A3A3;
 
   --bg-card: #1C1C1C;
+  --line: #3D3D3D;
   --overlay: rgba(0, 0, 0, 0.6);
   --hover-tint: rgba(255, 255, 255, 0.08);
   --loading-veil: rgba(18, 18, 18, 0.9);
@@ -108,11 +110,11 @@ body {
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
-  border-left: 2px solid var(--text-primary);
+  border-left: 2px solid var(--line);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--bg-tertiary);
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-purple);
@@ -121,8 +123,8 @@ body {
 /* Neobrutalism flat panel utility */
 .glass-panel {
   background: var(--bg-secondary);
-  border: 2px solid var(--text-primary);
-  box-shadow: 4px 4px 0px 0px var(--text-primary);
+  border: 2px solid var(--line);
+  box-shadow: 4px 4px 0px 0px var(--line);
   border-radius: var(--radius-md);
   transition: var(--transition-smooth);
 }
@@ -130,10 +132,10 @@ body {
 /* Animations */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 4px 4px 0px 0px var(--text-primary);
+    box-shadow: 4px 4px 0px 0px var(--line);
   }
   50% {
-    box-shadow: 6px 6px 0px 0px var(--text-primary);
+    box-shadow: 6px 6px 0px 0px var(--line);
     transform: translate(-2px, -2px);
   }
 }

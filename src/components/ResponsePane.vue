@@ -206,7 +206,7 @@ const copyToClipboard = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--line);
   padding-bottom: 12px;
 }
 
@@ -234,15 +234,15 @@ const copyToClipboard = () => {
 .status-badge.success {
   background: var(--accent-cyan);
   color: var(--ink);
-  border: 2px solid var(--text-primary);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  border: 2px solid var(--line);
+  box-shadow: 2px 2px 0px 0px var(--line);
 }
 
 .status-badge.error {
   background: var(--accent-rose);
   color: var(--ink);
-  border: 2px solid var(--text-primary);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  border: 2px solid var(--line);
+  box-shadow: 2px 2px 0px 0px var(--line);
 }
 
 .meta-tag {
@@ -250,7 +250,7 @@ const copyToClipboard = () => {
   font-size: 0.7rem;
   color: var(--text-primary);
   background: var(--bg-card);
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--line);
   padding: 2px 8px;
   border-radius: var(--radius-sm);
 }
@@ -340,7 +340,7 @@ const copyToClipboard = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--line);
   background: var(--bg-tertiary);
 }
 
@@ -356,7 +356,7 @@ const copyToClipboard = () => {
   font-size: 0.75rem;
   font-weight: 700;
   cursor: pointer;
-  border-right: 2px solid var(--text-primary);
+  border-right: 2px solid var(--line);
   transition: var(--transition-smooth);
 }
 
@@ -373,7 +373,7 @@ const copyToClipboard = () => {
 .tab-badge {
   background: var(--bg-card);
   color: var(--text-primary);
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--line);
   font-size: 0.65rem;
   padding: 1px 4px;
   border-radius: 8px;
@@ -382,7 +382,7 @@ const copyToClipboard = () => {
 
 .copy-btn {
   background: var(--bg-secondary);
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
   color: var(--text-primary);
   font-size: 0.7rem;
   font-weight: 700;
@@ -396,7 +396,7 @@ const copyToClipboard = () => {
 .copy-btn:hover {
   background: var(--bg-tertiary);
   transform: translate(-1px, -1px);
-  box-shadow: 2px 2px 0px 0px var(--text-primary);
+  box-shadow: 2px 2px 0px 0px var(--line);
 }
 
 .response-tab-content {
@@ -405,7 +405,7 @@ const copyToClipboard = () => {
   padding: 12px;
   background: var(--bg-card);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--line);
   border-top: none;
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -432,7 +432,7 @@ const copyToClipboard = () => {
   display: grid;
   grid-template-columns: 200px 1fr;
   padding: 6px 8px;
-  border-bottom: 1px solid var(--text-primary);
+  border-bottom: 1px solid var(--line);
   font-size: 0.75rem;
 }
 
